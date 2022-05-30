@@ -36,9 +36,9 @@ document.querySelector('.add-plant-btn')
 
 function addPlantToList() {
     //2. när knappen tryckts på skall vi ta värdet som ligger i vårt input-fält
-    let plantInput = document.getElementById('plant-input');
+    let plantInputElement = document.getElementById('plant-input');
     //vi kommer åt värdet i ett input fält genom att använda oss av '.value'
-    plantInput = plantInput.value;
+    let plantInput = plantInputElement.value;
     //3. ta värdet och lägga in det i vår plantList
     plantList.push(plantInput);
     //tömmer input-fältet efter att vi tryckt på knappen
