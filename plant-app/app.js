@@ -37,11 +37,13 @@ document.querySelector('.add-plant-btn')
 function addPlantToList() {
     //2. när knappen tryckts på skall vi ta värdet som ligger i vårt input-fält
     let plantInputElement = document.getElementById('plant-input');
+    console.log(plantInputElement);
     //vi kommer åt värdet i ett input fält genom att använda oss av '.value'
     let plantInput = plantInputElement.value;
+    console.log(plantInput);
     //3. ta värdet och lägga in det i vår plantList
     plantList.push(plantInput);
     //tömmer input-fältet efter att vi tryckt på knappen
-    plantInput.value = "";
+    plantInputElement.value = "";
     generatePlantListUI();
 }
