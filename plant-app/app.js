@@ -33,16 +33,16 @@ generatePlantListUI();
 //1. lägga till en eventlyssnare på vår knapp
 document.querySelector('.add-plant-btn').addEventListener('click', addPlantToList);
 
+let plantInputElement = document.getElementById('plant-input');
+
 function addPlantToList() {
     //2. när knappen tryckts på skall vi ta värdet som ligger i vårt input-fält
-    let plantInputElement = document.getElementById('plant-input');
     //vi kommer åt värdet i ett input fält genom att använda oss av '.value'
     let plantInput = plantInputElement.value;
 
     //vi vill kolla så att input inte är tomt
     //OM det är tomt skall vi inte lägga in något i listan eller kalla på generatePlantListUI-funktionen
     if (plantInput !== "") {
-        console.log("Inte TOMT!!");
         //3. ta värdet och lägga in det i vår plantList
         plantList.push(plantInput);
         //tömmer input-fältet efter att vi tryckt på knappen
@@ -53,3 +53,10 @@ function addPlantToList() {
 
 //sätta en eventlyssnare även på input-fältet, 
 //där vi kollar om knappen som tryckts på är 'enter'-knappen
+plantInputElement.addEventListener('keypress', function(event) { //om inte 'event' funkar -> använd 'e' bara
+    //kolla om det är just enter-knappen vi tryckt på
+    if (event.key == "Enter") {
+        console.log(event);
+        addPlantToList();
+    }
+})
