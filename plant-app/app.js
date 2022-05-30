@@ -31,8 +31,7 @@ function generatePlantListUI() {
 generatePlantListUI();
 
 //1. lägga till en eventlyssnare på vår knapp
-document.querySelector('.add-plant-btn')
-    .addEventListener('click', addPlantToList);
+document.querySelector('.add-plant-btn').addEventListener('click', addPlantToList);
 
 function addPlantToList() {
     //2. när knappen tryckts på skall vi ta värdet som ligger i vårt input-fält
@@ -51,3 +50,6 @@ function addPlantToList() {
         generatePlantListUI();
     }
 }
+
+//sätta en eventlyssnare även på input-fältet, 
+//där vi kollar om knappen som tryckts på är 'enter'-knappen
