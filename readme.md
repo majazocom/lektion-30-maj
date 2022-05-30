@@ -11,4 +11,4 @@ Din miniräknare ska vara stiligt CSS:ad.
 4. Matematiska funktionen
 5. Uppdatera displayen på miniräknaren
 
-![bild på hur miniräknaren kommer se ut]('./calcimg.png')
+![bild på hur miniräknaren kommer se ut](./calcimg.png)
