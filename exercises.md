@@ -337,49 +337,6 @@ for () {}
 newString += str[i];
 ```
 
-### Async / promises
-
-**50** Vilka *tre* ```state``` har ett promise?
-
-**51** Följande funktion returnerar data från en databas. Skriv ut resultatet i ```console.log(data)``` med hjälp av en *promise-kedja*. Se också till att fånga upp ev *errors*.
-
-```javascript
-getData(url)
-```
-
-**52** Gör samma operation som föregående, fast med ```async / await``` syntax istället. Glöm inte att fånga upp ev. errors.
-
-
-### API-interaktion med fetch()
-
-**53** Gör en funktion ( ```chuckMe(url)``` ) som använder ```fetch()``` och följande REST-resurs. Din funktion ska returnera ett skämt som du skriver ut med ```console.log()```.
-
-    const url = `https://api.chucknorris.io/jokes/random`;
-
-**54** Gör en ```POST``` -request med ```fetch()``` till nedanstående endpoint. Din POST ska innehålla nedanstående JS-objekt. ```console.log()``` svaret du får från servern.
-
-```javascript
-const url = `https://jsonplaceholder.typicode.com/posts`
-
-let data = {
-    id: 1,
-    joke: 'How many ears does Spock have? - Three; Left, right and the final front ear.',
-    funny: true
-}
-```
-
-<details>
-    <summary>hint</summary>
-    fetch(url, {
-    method: 'POST',
-    body:... 
-  })
-</details>
-
-
-**55** Gör en ```PUT``` request till endpointen i ovanstående uppgift ( 12.2 ). Uppdatera skämtet till ett ännu roligare. ```console.log()``` svaret du får från servern. 
-
-
 ## DOM manipulation
 
 ### Single selector
